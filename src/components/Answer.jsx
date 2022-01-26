@@ -1,9 +1,23 @@
-import * as React from "react";
-import Button from "@mui/material/Button";
-// import Stack from "@mui/material/Stack";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+}));
 
 const Answer = (props) => {
-  return <Button variant="outlined">{props.content}</Button>;
+  const classes = useStyles();
+  console.log(props);
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => props.select(props.content, props.nextId)}
+    >
+      {props.content}
+    </Button>
+  );
 };
 
 export default Answer;
