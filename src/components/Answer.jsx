@@ -20,7 +20,7 @@ const useStyles = makeStyles(() =>
 
 const Answer = (props) => {
   const classes = useStyles();
-  console.log(props);
+  // console.log(props);
   return (
     <Button
       className={classes.button}
